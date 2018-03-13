@@ -12,3 +12,6 @@ if __name__ == '__main__':
                                                           os.path.exists(os.path.join(base_dir, 'Task', d, 'C++'))]
     for task in tasks:
         print(os.path.join(base_dir, 'Task', task))
+        
+        # JavaScript
+        
