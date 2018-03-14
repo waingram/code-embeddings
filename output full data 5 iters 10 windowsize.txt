@@ -1,0 +1,530 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Mar  8 11:28:35 2018
+
+@author: Arnaoty
+"""
+
+mdl.wv.most_similar('FileInputStream')
+
+[('BufferedInputStream', 0.7710972428321838),
+ ('FileOutputStream', 0.6990489363670349),
+ ('DigestInputStream', 0.6483299732208252),
+ ('storeFile', 0.64013671875),
+ ('BufferedXInputStream', 0.6373381614685059),
+ ('BZip2InputStream', 0.6326420307159424),
+ ('"com/memoire/vainstall/resources/"', 0.6285543441772461),
+ ('FileReader', 0.6261107921600342),
+ ('FTPInputStream', 0.6196644902229309),
+ ('XFileInputStream', 0.6173462867736816)]
+ 
+ mdl.wv.most_similar('Arrays')
+Out[5]: 
+[('filterNamesList', 0.6189658641815186),
+ ('ArrayUtils', 0.592591404914856),
+ ('heapRecord2', 0.5690523982048035),
+ ('Collections', 0.5672394037246704),
+ ('"mainwindow-large.png"', 0.558293342590332),
+ ('BLOCK_DIRECTIM', 0.5490943193435669),
+ ('"mainwindow-medium.png"', 0.5474620461463928),
+ ('feeds:', 0.5262318849563599),
+ ('initializeClass', 0.5240998268127441),
+ ('getMaxValueFor', 0.5226540565490723)]
+ 
+ mdl.wv.most_similar('private')
+Out[7]: 
+[('transient', 0.5624932646751404),
+ ('"javax.jbi.messaging.sendSync"', 0.5589367151260376),
+ ('volatile', 0.5379459857940674),
+ ('public', 0.5110906362533569),
+ ('setRefineCheckBox', 0.5033206939697266),
+ ('homepage_switch_perspective_single_prefix', 0.4653933644294739),
+ ('"http://www.ini.unizh.ch/~tobi/biasgen"', 0.4639379382133484),
+ ('adjustReadableBuffers', 0.46380239725112915),
+ ('5886959979493020618L', 0.46222570538520813),
+ ('NewGameChooserEntry', 0.4613755941390991)]
+ 
+ mdl.wv.most_similar('extends')
+Out[6]: 
+[('implements', 0.7909241318702698),
+ ('WebviewerLinkProviderSPI', 0.588620662689209),
+ ('ObjectNamePropertyHandler', 0.5838608145713806),
+ ('staticFieldDelegate', 0.5827862024307251),
+ ('UriDescComparator', 0.5753711462020874),
+ ('respondeBook', 0.573525607585907),
+ ('CompositeDataPropertyHandler', 0.5733286142349243),
+ ('concat_pdf', 0.5725494027137756),
+ ('registerDynamicClass', 0.5696675777435303),
+ ('*/\\r\\npublic', 0.5666272044181824)]
+ 
+ mdl.wv.most_similar('X')
+Out[8]: 
+[('Y', 0.8538323640823364),
+ ('Z', 0.7326529026031494),
+ ('someobjects', 0.7141411900520325),
+ ('L', 0.6905354261398315),
+ ('B', 0.6764035820960999),
+ ('"HISTORIAL', 0.6481049060821533),
+ ('A', 0.6416364908218384),
+ ('id_tag', 0.6349171996116638),
+ ('N', 0.6269151568412781),
+ ('G', 0.6259521842002869)]
+
+mdl.wv.most_similar('x')
+Out[9]: 
+[('y', 0.8493607044219971),
+ ('calculateUTMFromPointAtFeetDistanceAlongLine', 0.7231159806251526),
+ ('"pointX"', 0.7183622717857361),
+ ('</DocumentProperties>\\n"', 0.7067171931266785),
+ ('"DirectionalVectorY="', 0.6812631487846375),
+ ('<Version>11.6568</Version>\\n"', 0.6438649892807007),
+ ('<ExcelWorkbook', 0.6435047388076782),
+ ('setMapHeightObstacles', 0.6418402791023254),
+ ('"[^\\\\w\\\\.\\\\-\\\\:\\\\;\\\\#\\\\_]"', 0.6413065195083618),
+ ('mallas', 0.6369478702545166)]
+ 
+  mdl.wv.most_similar('404')
+Out[13]: 
+[('401', 0.8192880153656006),
+ ('403', 0.7840516567230225),
+ ('sendError', 0.7815381288528442),
+ ('SC_NOT_FOUND', 0.7763469219207764),
+ ('SC_UNAUTHORIZED', 0.7684526443481445),
+ ('SC_FORBIDDEN', 0.7505658268928528),
+ ('HTTP_NOT_FOUND', 0.7447953224182129),
+ ('304', 0.7379071712493896),
+ ('Unauthorized"', 0.729409396648407),
+ ('NOT_MODIFIED', 0.72243332862854)]
+ 
+ mdl.wv.most_similar('5')
+Out[14]: 
+[('6', 0.8691941499710083),
+ ('3', 0.8251485824584961),
+ ('4', 0.8202420473098755),
+ ('7', 0.7794652581214905),
+ ('10', 0.7306826710700989),
+ ('2', 0.6887685656547546),
+ ('11', 0.6378246545791626),
+ ('13', 0.6194607615470886),
+ ('12', 0.605918288230896),
+ ('"http://www.transterrestrial.com/index.xml"', 0.5939834713935852)]
+
+mdl.wv.most_similar('0')
+Out[15]: 
+[('1', 0.6031076312065125),
+ ('2', 0.5769236087799072),
+ ('dataLen', 0.5617192983627319),
+ ('leftOvers', 0.5595302581787109),
+ ('(', 0.5558491945266724),
+ ('glyphCount', 0.5540868043899536),
+ ('length', 0.5486630201339722),
+ ('prec', 0.5446685552597046),
+ ('pnum', 0.5443922281265259),
+ ('aind', 0.5417150259017944)]
+ 
+ 
+ mdl.wv.most_similar('}')
+Out[16]: 
+[('(', 0.7167367339134216),
+ ('{', 0.7161122560501099),
+ (')', 0.6837071180343628),
+ ('return', 0.6125195026397705),
+ (';', 0.605114221572876),
+ ('getCharArray', 0.552757740020752),
+ ('SAY_ALPHA__ESCAPE_DIGITS', 0.5320596694946289),
+ ('readDataPointImplFromPointBuff', 0.5139555931091309),
+ ('_nodeChannelRef', 0.5022115111351013),
+ ('clearEvent', 0.5008573532104492)]
+ 
+ mdl.wv.most_similar('sql')
+Out[17]: 
+[('getSqlType', 0.6755563616752625),
+ ('iSQLType', 0.6179068684577942),
+ ('dataTypesVector', 0.6096680760383606),
+ ('lastTableIndexTime', 0.5971376895904541),
+ ('oCol', 0.588792085647583),
+ ('SQLDATE_CONVERTER', 0.5792716145515442),
+ ('sSQL', 0.5784308910369873),
+ ('"java.sql.Types.SMALLINT"', 0.5777205228805542),
+ ('sqlDateACadena', 0.576751708984375),
+ ('SequencingPlatform', 0.5736666321754456)]
+
+mdl.wv.most_similar('run')
+Out[18]: 
+[('Runnable', 0.7254238128662109),
+ ('runSupport', 0.6132903099060059),
+ ('runnable', 0.6127708554267883),
+ ('invokeAndWait', 0.6017252802848816),
+ ('AdvertiserContact', 0.5918105840682983),
+ ('asyncExec', 0.589830219745636),
+ ('TimerTask', 0.5892277956008911),
+ ('addRequests', 0.5873962640762329),
+ ('runit', 0.5858896374702454),
+ ('"testConcurrentAccess', 0.5812263488769531)]
+ 
+ 
+mdl.wv.most_similar('params')
+Out[19]: 
+[('getParameters', 0.7036911249160767),
+ ('param', 0.7010459899902344),
+ ('parameters', 0.6849321126937866),
+ ('Parameters=', 0.6534491181373596),
+ ('getParams', 0.6453118324279785),
+ ('Parameter', 0.6183198690414429),
+ ('processClientResponse', 0.6137549877166748),
+ ('executeCompiledStatement', 0.6013959646224976),
+ ('NameValuePair', 0.6004565358161926),
+ ('newParams', 0.5931203365325928)]
+
+mdl.wv.most_similar('args')
+Out[20]: 
+[('argv', 0.7623673677444458),
+ ('printUsage', 0.6496541500091553),
+ ('arg', 0.6365618705749512),
+ ('newArgs', 0.6318042278289795),
+ ('"-d"', 0.616734504699707),
+ ('getCommandLineFromANNOCULTOR_ARGS', 0.6151692867279053),
+ ('arguments', 0.6106550693511963),
+ ('mainArgs', 0.5936681032180786),
+ ('processCommandLine', 0.5917288661003113),
+ ('Opciones', 0.5899379253387451)]
+
+mdl.wv.most_similar('IOException')
+Out[21]: 
+[('TIoException', 0.7089865207672119),
+ ('Db4oIOException', 0.6990602016448975),
+ ('HandleCheckResult', 0.6971579194068909),
+ ('m_incremental', 0.6900889277458191),
+ ('InstallerException', 0.68913733959198),
+ ('testUse222', 0.6879472732543945),
+ ('updateInterestedSetRead', 0.6871941089630127),
+ ('IPCException', 0.6854710578918457),
+ ('java.io.IOException', 0.6853953003883362),
+ ('InformationNotAvailableExc', 0.6847684383392334)]
+ 
+ mdl.wv.most_similar('NullPointerException')
+Out[22]: 
+[('InvalidObjectException', 0.7315780520439148),
+ ('IllegalArgumentException', 0.7236592173576355),
+ ('InvalidContextException', 0.7233538627624512),
+ ('IOPException', 0.7147794961929321),
+ ('OpenSearchRssException', 0.7134592533111572),
+ ('WiseConnectionException', 0.7116725444793701),
+ ('IllegalStateException', 0.7109091281890869),
+ ('NotActiveException', 0.709354817867279),
+ ('InvalidParameterException', 0.7084524035453796),
+ ('DigestAuthenticationException', 0.7060302495956421)]
+
+mdl.wv.most_similar('equals')
+Out[23]: 
+[('equalsIgnoreCase', 0.8614539504051208),
+ ('startsWith', 0.6794397234916687),
+ ('endsWith', 0.6299626231193542),
+ ('contentEquals', 0.626040518283844),
+ ('allSameState', 0.6080217361450195),
+ ('contains', 0.6006961464881897),
+ ('"Operation="', 0.5851393342018127),
+ ('"shut"', 0.585027813911438),
+ ('isNull', 0.5820789933204651),
+ ('isAnnotTop', 0.5771125555038452)]
+ 
+ mdl.wv.most_similar('wait')
+Out[24]: 
+[('sleep', 0.7255057096481323),
+ ('waitTime', 0.7027919292449951),
+ ('notifyAll', 0.7017307281494141),
+ ('InterruptedException', 0.6882341504096985),
+ ('sleeper', 0.6849462985992432),
+ ('interrupted', 0.6770015954971313),
+ ('PageLockTest', 0.6654045581817627),
+ ('isAlive', 0.6582399606704712),
+ ('sleepTime', 0.6547075510025024),
+ ('isInterrupted', 0.6528526544570923)]
+
+mdl.wv.most_similar('true')
+Out[25]: 
+[('false', 0.9444230198860168),
+ ('jButton_Buchung_stornieren', 0.6289429664611816),
+ ('boolean', 0.5905954241752625),
+ ('visible', 0.5788707733154297),
+ ('newActive', 0.5782662630081177),
+ ('paletteEntry', 0.5632918477058411),
+ ('AxesOnly', 0.5415621399879456),
+ ('getAttributeBooleanOptional', 0.5399059057235718),
+ ('showLegend', 0.5291157364845276),
+ ('isAbsoluteCoordinates', 0.5276519656181335)]
+ 
+ mdl.wv.most_similar('isvalid')
+Out[28]: 
+[('setPrintProperties', 0.6027360558509827),
+ ('canAnnounce', 0.5999307632446289),
+ ('get_transparency_reconnection', 0.5930429697036743),
+ ('isContinueThread', 0.5925036668777466),
+ ('zmqTested', 0.5912408828735352),
+ ('INACTIVE."', 0.5865302085876465),
+ ('DBFHeader', 0.5796946287155151),
+ ('"ks.init"', 0.5774700045585632),
+ ('bReturn', 0.5747954845428467),
+ ('hasHeader', 0.5726706981658936)]
+
+mdl.wv.most_similar('List')
+Out[29]: 
+[('Collection', 0.827976644039154),
+ ('ArrayList', 0.8100227117538452),
+ ('LinkedList', 0.6901789307594299),
+ ('Iterable', 0.6775248050689697),
+ ('EList', 0.6600102186203003),
+ ('Set', 0.6413773894309998),
+ ('FastList', 0.6371280550956726),
+ ('Deque', 0.6360446810722351),
+ ('ISubscriptionParameters', 0.6345880627632141),
+ ('IPl0Command', 0.6333430409431458)]
+ 
+ mdl.wv.most_similar('invalid')
+Out[26]: 
+[('unknown', 0.8084931373596191),
+ ('Invalid', 0.803040087223053),
+ ('illegal', 0.797205924987793),
+ ('missing', 0.7769691944122314),
+ ('No', 0.7680888772010803),
+ ('detected', 0.7650297284126282),
+ ('wrong', 0.7616784572601318),
+ ('"Bad', 0.7576836347579956),
+ ('returned', 0.752345621585846),
+ ('an', 0.7500529289245605)]
+ 
+ mdl.wv.most_similar('HashSet')
+Out[30]: 
+[('LinkedHashSet', 0.8437461853027344),
+ ('Set', 0.8327701091766357),
+ ('TreeSet', 0.8225326538085938),
+ ('buildTagsInformative', 0.704771876335144),
+ ('LinkedList', 0.6977828145027161),
+ ('SortedSet', 0.646382212638855),
+ ('NSMutableArray', 0.6388159990310669),
+ ('getPoolsById', 0.6385753154754639),
+ ('IdentityHashMap', 0.6117798089981079),
+ ('deleted(YamFile)"', 0.6098798513412476)]
+
+mdl.wv.most_similar('HashMap')
+Out[31]: 
+[('Map', 0.8396468162536621),
+ ('TreeMap', 0.8057646751403809),
+ ('LinkedHashMap', 0.8038933277130127),
+ ('WeakHashMap', 0.7135208249092102),
+ ('ConcurrentHashMap', 0.6979414224624634),
+ ('Hashtable', 0.6950851082801819),
+ ('IdentityHashMap', 0.655778169631958),
+ ('FastMap', 0.6483820676803589),
+ ('SoftReference', 0.6176129579544067),
+ 
+ mdl.wv.most_similar('HttpGet')
+Out[32]: 
+[('GetMethod', 0.8547623753547668),
+ ('HttpPost', 0.8337021470069885),
+ ('PostMethod', 0.8278524875640869),
+ ('HttpClient', 0.7435528039932251),
+ ('HttpResponse', 0.7263661623001099),
+ ('HttpHead', 0.7212251424789429),
+ ('HttpDelete', 0.7120605707168579),
+ ('HttpPut', 0.7023624777793884),
+ ('DefaultHttpClient', 0.6799598932266235),
+ ('httpPost', 0.6776333451271057)]
+
+mdl.wv.most_similar('HttpRequest')
+Out[33]: 
+[('HttpUriRequest', 0.8367500305175781),
+ ('HttpContext', 0.7947355508804321),
+ ('HttpRequestBase', 0.789058268070221),
+ ('HttpRequestExchange', 0.7727769017219543),
+ ('handleResponse', 0.7694334983825684),
+ ('httpRequest', 0.7653735876083374),
+ ('RequestWrapper', 0.7571297287940979),
+ ('HttpMethod', 0.7465955018997192),
+ ('HttpResponse', 0.738312304019928),
+ ('ClientRequest', 0.7354749441146851)]
+ 
+ mdl.wv.most_similar('Parser')
+Out[34]: 
+[('ParserDelegator', 0.8209387063980103),
+ ('getParser', 0.8085911273956299),
+ ('parser', 0.753333330154419),
+ ('setParser', 0.7324472665786743),
+ ('HtmlParser', 0.7290961742401123),
+ ('XMLParser', 0.7212734222412109),
+ ('AbstractParser', 0.7037641406059265),
+ ('createParser', 0.6998984217643738),
+ ('detectParser', 0.6993794441223145),
+ ('XMLReader', 0.6968361139297485)]
+
+mdl.wv.most_similar('XMLReader')
+Out[35]: 
+[('XMLReaderFactory', 0.9076600074768066),
+ ('xmlReader', 0.874985933303833),
+ ('createXMLReader', 0.8661881685256958),
+ ('getXMLReader', 0.8541907668113708),
+ ('setContentHandler', 0.8137683868408203),
+ ('SAXParser', 0.8111819624900818),
+ ('setErrorHandler', 0.8090485334396362),
+ ('newSAXParser', 0.8080078363418579),
+ ('xr', 0.7929185628890991),
+ ('saxParser', 0.7880706787109375)]
+ 
+ mdl.wv.most_similar('*')
+Out[36]: 
+[('/', 0.6278358101844788),
+ ('yDimEven', 0.5344052314758301),
+ ('0.019', 0.5247735977172852),
+ ('totalling', 0.5246532559394836),
+ ('0.06f', 0.5218428373336792),
+ ('CircuitBase', 0.5185484886169434),
+ ('FLT_HIGHPASS', 0.5155008435249329),
+ ('bayesResultWeight', 0.506614625453949),
+ ('DECIMAL64', 0.5055097937583923),
+ ('"onlinehold"', 0.5050287246704102)]
+
+mdl.wv.most_similar('%')
+Out[37]: 
+[('/=', 0.6494367122650146),
+ ('/', 0.6438196301460266),
+ ('"auth_len%4="', 0.6383780241012573),
+ ('charBufferSize', 0.5975592732429504),
+ ('requestTimeout', 0.5947205424308777),
+ ('cellid', 0.5940629243850708),
+ ('*=', 0.5883052945137024),
+ ('"http://www.flickr.com/images/buddyicon.jpg"', 0.5882085561752319),
+ ('numColors', 0.5869526863098145),
+ ('currBit', 0.5804528594017029)]
+ mdl.wv.most_similar('==')
+Out[38]: 
+[('!=', 0.8043985366821289),
+ ('containsGroupIds', 0.6295189261436462),
+ ('>=', 0.6290985345840454),
+ ('<=', 0.6245567202568054),
+ ('inConstant', 0.5594256520271301),
+ ('applyBuff', 0.5576358437538147),
+ ('isTapping', 0.5567232966423035),
+ ('".*http://www.ofdb.de/film/[0-9].*"', 0.554977536201477),
+ ('noCategory', 0.5546050071716309),
+ ('a_pep', 0.5540987253189087)]
+
+mdl.wv.most_similar('width')
+Out[39]: 
+[('height', 0.9422266483306885),
+ ('newPolygonScans', 0.7701700925827026),
+ ('newViewScans', 0.7547298669815063),
+ ('getWidth', 0.7528362274169922),
+ ('"Map\'s', 0.7395075559616089),
+ ('getHeight', 0.7379015684127808),
+ ('maxWidth', 0.7340903282165527),
+ ('setMainFrameHeight', 0.7263145446777344),
+ ('getImageWidth', 0.7240099906921387),
+ ('"height"', 0.7208845615386963)]
+ 
+ 
+mdl.wv.most_similar('getname')
+Out[40]: 
+[('getunits', 0.7161257266998291),
+ ('booktotal', 0.6981440186500549),
+ ('(run)', 0.6749992370605469),
+ ('LittleEndianDataOutput', 0.6627843379974365),
+ ('"CARBONATION_USED"', 0.650500476360321),
+ ('</id>\\n"', 0.6491707563400269),
+ ('\\"</td><td>\\"', 0.6490679383277893),
+ ('ABSOLUTE_TOKEN', 0.6467898488044739),
+ ('"ELECTRONIC_TEXT"', 0.6448110938072205),
+ ('setOs', 0.6437734365463257)]
+ 
+ mdl.wv.most_similar('node')
+Out[41]: 
+[('Node', 0.7850005030632019),
+ ('parentNode', 0.7438218593597412),
+ ('getNode', 0.7239500284194946),
+ ('childNode', 0.7017279863357544),
+ ('nodes', 0.6774307489395142),
+ ('rootNode', 0.6697380542755127),
+ ('currentNode', 0.6672977209091187),
+ ('nodeName', 0.6536767482757568),
+ ('siblingNode', 0.6517132520675659),
+ ('newNode', 0.6514135003089905)]
+ 
+ mdl.wv.most_similar('0x0f')
+Out[42]: 
+[('0xF', 0.8561373353004456),
+ ('0xf', 0.8408476114273071),
+ ('0xf0', 0.813700795173645),
+ ('0x3f', 0.8086023330688477),
+ ('HEX_DIGITS', 0.7608866691589355),
+ ('0x00FF', 0.7383518218994141),
+ ('HEXDIGITS', 0.7305237054824829),
+ ('0x0F', 0.710740864276886),
+ ('BITMASK_LOW', 0.7090561985969543),
+ ('getUShortL', 0.6949459314346313)]
+
+mdl.wv.most_similar('<<')
+Out[43]: 
+[('<<=', 0.6910034418106079),
+ ('nStartIndex', 0.6237016916275024),
+ ('FLAGS_OFFSET', 0.6113952398300171),
+ ('>>=', 0.6113664507865906),
+ ('~', 0.6113047003746033),
+ ('BASE_UPROM', 0.591822624206543),
+ ('BASE_RAM', 0.5871615409851074),
+ ('BASE_MULTIFACE', 0.5837168097496033),
+ ('BlackBerry"', 0.5773234963417053),
+ ('^', 0.5748075842857361)]
+ 
+ mdl.wv.most_similar('delete')
+Out[44]: 
+[('renameTo', 0.7745977640151978),
+ ('deleteFile', 0.7641547322273254),
+ ('mkdir', 0.6839390993118286),
+ ('deleteDir', 0.6749584674835205),
+ ('rename', 0.6691282987594604),
+ ('deleteDirectory', 0.6657384634017944),
+ ('renameFile', 0.6357438564300537),
+ ('checkFile', 0.634685218334198),
+ ('backupFile', 0.6253029108047485),
+ ('mkdirs', 0.6162862777709961)]
+
+mdl.wv.most_similar('++')
+Out[45]: 
+[('i', 0.6863428354263306),
+ ('i++)', 0.5813926458358765),
+ ('"MASH_STEPS"', 0.55646812915802),
+ ('form.inpId.length;', 0.552043080329895),
+ ('hostguids', 0.538118839263916),
+ ('isValidUTF8', 0.5380812883377075),
+ ('newNodeallCPs', 0.5299420356750488),
+ ('0', 0.5282180309295654),
+ ('keyvk2vsc', 0.5274229049682617),
+ ('numAttempts', 0.5264306664466858)]
+ 
+ mdl.wv.most_similar('count')
+Out[47]: 
+[('getCount', 0.6718990802764893),
+ ('total', 0.6146489381790161),
+ ('currentCount', 0.6087397336959839),
+ ('writeCount', 0.5972483158111572),
+ ('writecount', 0.5729789137840271),
+ ('cnt', 0.5726561546325684),
+ ('readCount', 0.5669597387313843),
+ ('getObjectCount', 0.5640206336975098),
+ ('increment', 0.5616070628166199),
+ ('readcount', 0.5479146242141724)]
+
+mdl.wv.most_similar('red')
+Out[48]: 
+[('green', 0.9245576858520508),
+ ('RED', 0.7852888107299805),
+ ('GREEN', 0.7574920654296875),
+ ('color', 0.7546942830085754),
+ ('componentIndex', 0.7534976005554199),
+ ('getRed', 0.7531847953796387),
+ ('YELLOW', 0.7519901990890503),
+ ('foreground', 0.7406623959541321),
+ ('getBlue', 0.7406431436538696),
+ ('Color', 0.7401208877563477)]
+ 
+ 
+ 
