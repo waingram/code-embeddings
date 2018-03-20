@@ -1,12 +1,18 @@
-# build dataset from RosettaData project
+# -*- coding: utf-8 -*-
+
+"""
+code_embeddings.utils
+This module provides utility functions that are used within code_embeddings.
+"""
 import os
+import regex
 from shutil import copyfile
 
 source_dir = '/Users/waingram/Projects/RosettaCodeData'
-dest_dir = 'data'
+dest_dir = '../data'
 
 
-def copy_files(task, lang):
+def _copy_files(task, lang):
     os.makedirs(os.path.join(dest_dir, lang, task), exist_ok=True)
     implementations = os.listdir(os.path.join(source_dir, 'Task', task, lang))
     for implementation in implementations:
@@ -15,7 +21,7 @@ def copy_files(task, lang):
                  os.path.join(dest_dir, lang, task, implementation))
 
 
-if __name__ == '__main__':
+def create_dataset():
     tasks = [d for d in os.listdir(source_dir + '/Task') if
              os.path.exists(os.path.join(source_dir, 'Task', d, 'JavaScript')) and
              os.path.exists(os.path.join(source_dir, 'Task', d, 'Java')) and
@@ -24,9 +30,21 @@ if __name__ == '__main__':
              os.path.exists(os.path.join(source_dir, 'Task', d, 'Ruby')) and
              os.path.exists(os.path.join(source_dir, 'Task', d, 'C++'))]
     for task in tasks:
-        copy_files(task, 'JavaScript')
-        copy_files(task, 'Java')
-        copy_files(task, 'Python')
-        copy_files(task, 'PHP')
-        copy_files(task, 'Ruby')
-        copy_files(task, 'C++')
+        _copy_files(task, 'JavaScript')
+        _copy_files(task, 'Java')
+        _copy_files(task, 'Python')
+        _copy_files(task, 'PHP')
+        _copy_files(task, 'Ruby')
+        _copy_files(task, 'C++')
+
+
+def parse_subroutines_javascript(code):
+    """Parse JavaScript files into separate functions
+
+        :param code: JS code to parse.
+        :rtype: map
+    """
+    pattern = r'function\s+\w+\s*\([^{]+({(?:[^{}]+\/\*.*?\*\/|[^{}]+\/\/.*?$|[^{}]+|(?1))*+})'
+    scanner = regex.finditer(pattern, code, regex.MULTILINE)
+    return map(lambda match : match.group(0), scanner)
+
