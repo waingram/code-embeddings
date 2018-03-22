@@ -16,7 +16,7 @@ def split_javascript():
 
 
 def split_java():
-    file = open("fixtures/testfile.java", "r")
+    file = open("fixtures/forest-fire.java", "r")
     data = file.read()
     file.close()
 
