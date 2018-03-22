@@ -58,3 +58,14 @@ def parse_subroutines_java(code):
     pattern = r'(?:(?:public|private|static|protected)\s+)*\s*[\w\<\>\[\]]+\s+\w+\s*\([^{]+({(?:[^{}]+\/\*.*?\*\/|[^{}]+\/\/.*?$|[^{}]+|(?1))*+})'
     scanner = regex.finditer(pattern, code, regex.MULTILINE)
     return map(lambda match: match.group(0), scanner)
+
+
+def parse_subroutines_php(code):
+    """Parse PHP files into separate functions
+
+        :param code: PHP code to parse.
+        :rtype: map
+    """
+    pattern = r'function\s+\w+\s*\([^{]+({(?:[^{}]+\/\*.*?\*\/|[^{}]+\/\/.*?$|[^{}]+|(?1))*+})'
+    scanner = regex.finditer(pattern, code, regex.MULTILINE)
+    return map(lambda match: match.group(0), scanner)
