@@ -8,6 +8,8 @@ name = "pypi"
 [packages]
 
 regex = "*"
+matplotlib = "*"
+sklearn = "*"
 
 
 [dev-packages]
