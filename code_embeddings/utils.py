@@ -30,7 +30,7 @@ def tokenize(string):
     translator = str.maketrans(punctuation, ' ' * len(punctuation))  # map punctuation to space
     clean = text.translate(translator).split()
     # clean = ''.join([' ' if c in punctuation else c for c in text]).split()
-    tokens = [e for e in (' '.join(clean)).lower().split() if len(e) > 2]
+    tokens = [e for e in (' '.join(clean)).lower().split()]
     return tokens
 
 
