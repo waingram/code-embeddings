@@ -7,9 +7,31 @@ This module provides utility functions that are used within code_embeddings.
 import os
 import regex
 from shutil import copyfile
+from string import punctuation
 
 source_dir = '/Users/waingram/Projects/RosettaCodeData'
 dest_dir = '../data'
+
+first_cap_re = regex.compile('(.)([A-Z][a-z]+)')
+all_cap_re = regex.compile('([a-z0-9])([A-Z])')
+
+
+def convert_camel_case(s):
+    s1 = first_cap_re.sub(r'\1 \2', s)
+    return all_cap_re.sub(r'\1 \2', s1).lower()
+
+
+def convert_snake_case(s):
+    return regex.sub(r"_", " ", s)
+
+
+def tokenize(string):
+    text = convert_snake_case(string)
+    translator = str.maketrans(punctuation, ' ' * len(punctuation))  # map punctuation to space
+    clean = text.translate(translator).split()
+    # clean = ''.join([' ' if c in punctuation else c for c in text]).split()
+    tokens = [e for e in (' '.join(clean)).lower().split() if len(e) > 2]
+    return tokens
 
 
 def _copy_files(task, lang):
