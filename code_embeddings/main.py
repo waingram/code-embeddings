@@ -17,10 +17,11 @@ from gensim.models.doc2vec import TaggedDocument
 '''
 This part of the code just generates embeddingds on the word level
 '''
-batch_size = 42120 #10000
+# batch_size = 42120 #10000
 corpusDirectory = "E:\\PHD\\Thesis VT\\Data\\era_bcb_sample"
 code_repository = Raw_Code_Reader(corpusDirectory)
-programs_batch = code_repository.load_next_batch(batch_size)
+programs_batch = code_repository.load_all_data()
+# programs_batch = code_repository.load_next_batch(batch_size)
 tokenized_code = code_repository.tokenize_loaded_data()
 
 print('Data Loaded')
