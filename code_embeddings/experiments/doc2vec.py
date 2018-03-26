@@ -13,7 +13,7 @@ model = doc2vec.get_model()
 docs = doc2vec.get_docs()
 
 doc_id = np.random.randint(model.docvecs.count)  # Pick random doc; re-run cell for more examples
-doc_id = [i for i, x in enumerate(docs) if x[1][0] == 'Sieve-of-Eratosthenes'][0]
+doc_id = [i for i, x in enumerate(docs) if x[1][0] == 'Sieve-of-Eratosthenes'][4]
 
 inferred_docvec = model.infer_vector(docs[doc_id].words)
 print('\n%s:' % (docs[doc_id].tags[0]))
