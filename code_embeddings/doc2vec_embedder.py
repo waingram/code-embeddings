@@ -9,7 +9,16 @@ from random import shuffle
 
 class Doc2vecEmbedder():
     cores = multiprocessing.cpu_count()
-    alpha, min_alpha, passes = (0.025, 0.001, 20)
+    passes = 20
+    alpha = 0.025
+    min_alpha = 0.001
+    training_algorithm = 2
+    epochs = 500
+    vector_size = 50
+    window = 5
+    min_count = 10
+    alpha = 0.05
+    negative = 0
     alpha_delta = (alpha - min_alpha) / passes
     assert gensim.models.doc2vec.FAST_VERSION > -1, "This will be painfully slow otherwise"
 
@@ -18,7 +27,16 @@ class Doc2vecEmbedder():
         self._models_directory = None
         self._tagged_docs = None
         # TODO: make these parameters
-        self._model = Doc2Vec(dm=1, dm_concat=1, vector_size=25, window=5, negative=5, hs=0, min_count=2, epochs=500,
+        self._model = Doc2Vec(dm=self.training_algorithm,
+                              dbow_words=1,
+                              sample=1e-5,
+                              alpha=self.alpha,
+                              min_alpha=self.min_alpha,
+                              vector_size=self.vector_size,
+                              window=self.window,
+                              min_count=self.min_count,
+                              negative=self.negative,
+                              epochs=self.epochs,
                               workers=self.cores)
 
     def _process_files(self):
