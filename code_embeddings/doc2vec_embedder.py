@@ -83,23 +83,23 @@ class Doc2vecEmbedder():
     """
 
     _cores = multiprocessing.cpu_count()
-    _passes = 20
+    _passes = 25
 
-    _dm = 1  # training algorithm: 1 = PV-DM, 0 = PV-DBOW
-    _vector_size = 40
+    _dm = 0  # training algorithm: 1 = PV-DM, 0 = PV-DBOW
+    _vector_size = 300
     _window = 5
     _alpha = 0.025
     _min_alpha = 0.001
-    _min_count = 2
+    _min_count = 3
     _max_vocab_size = None
     _sample = 1e-5
     _workers = _cores
-    _epochs = 500
+    _epochs = 20
     _hs = 0
     _negative = 0
     _dm_mean = 0
     _dm_concat = 0
-    _dm_tag_count = 2
+    _dm_tag_count = 1
     _dbow_words = 1
 
     _alpha_delta = (_alpha - _min_alpha) / _passes
@@ -110,23 +110,7 @@ class Doc2vecEmbedder():
         self._code_directory = None
         self._models_directory = None
         self._tagged_docs = None
-        # TODO: make these parameters
-        self._model = Doc2Vec(dm=self._dm,
-                              vector_size=self._vector_size,
-                              window=self._window,
-                              alpha=self._alpha,
-                              min_alpha=self._min_alpha,
-                              min_count=self._min_count,
-                              max_vocab_size=self._max_vocab_size,
-                              sample=self._sample,
-                              workers=self._workers,
-                              epochs=self._epochs,
-                              hs=self._hs,
-                              negative=self._negative,
-                              dm_mean=self._dm_mean,
-                              dm_concat=self._dm_concat,
-                              dm_tag_count=self._dm_tag_count,
-                              dbow_words=self._dbow_words)
+        self._model = None
 
     def _process_files(self):
         for programming_language in self._code_directory.glob('./Java'):
@@ -135,27 +119,24 @@ class Doc2vecEmbedder():
             for programming_task in programming_language.glob('./*'):
                 if not programming_task.is_dir():
                     continue
-                for code_fragment in programming_task.glob('./*'):
-                    # print('Processing "{}"'.format(code_fragment))
-                    with code_fragment.open() as f:
+                for implementation in programming_task.glob('./*'):
+                    print('Processing %s' % implementation.name)
+                    with implementation.open() as f:
                         tokens = tokenize(f.read())
-                    yield TaggedDocument(tokens, [programming_task.name, programming_language.name])
+                    yield TaggedDocument(tokens, [implementation.name])
 
     def build_model(self, code_directory):
         self._code_directory = Path(code_directory)
         self._tagged_docs = list(self._process_files())
-        print('Doc2Vec: building the model')
-        self._model.build_vocab(self._tagged_docs)
-
-    def train(self):
-        for epoch in range(self._passes):
-            doc_list = self._tagged_docs
-            shuffle(doc_list)  # Shuffling gets best results
-            if epoch % 2 == 0:
-                print('Now training epoch {}'.format(epoch))
-            self._model.train(self._tagged_docs, total_examples=self._model.corpus_count, epochs=self._model.epochs)
-            self._model.alpha -= self._min_alpha  # decrease the learning rate
-            self._model.min_alpha = self._model.alpha  # fix the learning rate, no decay
+        print('\nDoc2Vec: building the model')
+        self._model = Doc2Vec(self._tagged_docs,
+                              dm=self._dm,
+                              min_count=self._min_count,
+                              max_vocab_size=self._max_vocab_size,
+                              workers=self._workers,
+                              epochs=self._epochs,
+                              dm_tag_count=self._dm_tag_count,
+                              dbow_words=self._dbow_words)
 
     def save_model(self, models_directory):
         self._models_directory = Path(models_directory)
