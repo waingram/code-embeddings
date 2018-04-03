@@ -19,4 +19,4 @@ inferred_docvec = model.infer_vector(doc.words)
 
 print('\n%s' % (doc.tags[0]))
 for vec in model.docvecs.most_similar([inferred_docvec], topn=6):
-    print('%s' % str(vec))
+    print('\t%s' % str(vec))
