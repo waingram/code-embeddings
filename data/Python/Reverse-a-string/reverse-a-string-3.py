@@ -1,1 +1,0 @@
-''.join(reversed(string))

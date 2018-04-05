@@ -1,2 +1,0 @@
-class MyInvalidArgument < ArgumentError
-end

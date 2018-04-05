@@ -1,1 +1,0 @@
-FIRST_NAME, LAST_NAME, PHONE = range(3)
