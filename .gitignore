@@ -2,6 +2,9 @@
 training_data/*
 test_data/*
 
+# don't ignore keep files
+!.keep
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
