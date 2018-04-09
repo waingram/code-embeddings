@@ -1,6 +1,5 @@
 # Project specific
 training_data/*
-test_data/*
 
 # don't ignore keep files
 !.keep
