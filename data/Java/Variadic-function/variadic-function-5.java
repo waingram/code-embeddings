@@ -1,1 +1,0 @@
-printAll((Object)args);

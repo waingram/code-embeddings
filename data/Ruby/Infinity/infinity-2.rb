@@ -1,1 +1,0 @@
-a = Float::INFINITY       # => Infinity

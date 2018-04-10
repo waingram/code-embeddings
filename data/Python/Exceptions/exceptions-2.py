@@ -1,2 +1,0 @@
-class MyInvalidArgument(ValueError):
-   pass

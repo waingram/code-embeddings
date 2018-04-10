@@ -1,1 +1,0 @@
-$stderr.puts "Goodbye, World!"
