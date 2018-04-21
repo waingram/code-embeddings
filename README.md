@@ -6,7 +6,6 @@ The ability to search code repositories for functionally equivalent code would b
 
 ## Experiments
 
-[Doc2Vec embedding](https://github.com/waingram/code-embeddings/blob/master/experiments/doc2vec_experiments.ipynb)
-
-[Java Parsing](https://github.com/waingram/code-embeddings/blob/master/experiments/java_parsing.ipynb)
-[Python Parsing](https://github.com/waingram/code-embeddings/blob/master/experiments/python_parsing.ipynb)
+ - [Doc2Vec embedding](https://github.com/waingram/code-embeddings/blob/master/experiments/doc2vec_experiments.ipynb)
+ - [Java Parsing](https://github.com/waingram/code-embeddings/blob/master/experiments/java_parsing.ipynb)
+ - [Python Parsing](https://github.com/waingram/code-embeddings/blob/master/experiments/python_parsing.ipynb)
