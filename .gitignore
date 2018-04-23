@@ -1,8 +1,10 @@
 # Project specific
 training_data/*
+!training_data/README.md
 
 # don't ignore keep files
 !.keep
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
