@@ -9,12 +9,15 @@ from matplotlib import pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 from random import uniform
 
-def tsne_learn(model,  train_percent = 0.01, num_components=2):
+def tsne_learn(model, word_list = [], train_percent = 0.01, num_components=2):
     "Creates and TSNE model and plots it"
     labels = []
     tokens = []
 
-    for word in model.wv.vocab:
+    if not word_list:
+        word_list = model.wv.vocab
+
+    for word in word_list:
         u = uniform(0,1)
         if u < train_percent :
             tokens.append(model[word])
@@ -27,12 +30,14 @@ def tsne_learn(model,  train_percent = 0.01, num_components=2):
     new_values = tsne_model.fit_transform(tokens)
     return new_values, labels
 
-def iso_map_learn(model,  train_percent = 0.01, num_components=2):
+def iso_map_learn(model, word_list = [],  train_percent = 0.01, num_components=2):
     "Creates and TSNE model and plots it"
     labels = []
     tokens = []
+    if not word_list:
+        word_list = model.wv.vocab
 
-    for word in model.wv.vocab:
+    for word in word_list:
         u = uniform(0,1)
         if u < train_percent :
             tokens.append(model[word])
