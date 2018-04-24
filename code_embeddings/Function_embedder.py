@@ -30,7 +30,7 @@ class Function_Embedder(object):
                 self.fn_model.min_alpha = self.fn_model.alpha  # fix the learning rate, no decay
         
     def get_model(self):
-        return self.fn_model
+        return self.fn_model.docvecs
     
     def get_vector(self,word):
         if self.embedding == 'doc2v':
