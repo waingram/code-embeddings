@@ -29,11 +29,13 @@ python_pairs = [(x,python_model.docvecs[x]) for x in python_model.docvecs.doctag
 
 def write_model_to_file(model_pair,fname):
     f = open(fname,'w')
+    lst = []
     for x,v in model_pair:
-        f.write(x.strip())
-        f.write(' ')
-        f.write(' '.join([ str(s).strip() for s in v]))
-        f.write('\n')
+        sublst = []
+        sublst.append(x.strip())
+        sublst += [ str(s).strip() for s in v]
+        lst.append(' '.join(sublst))
+    f.write('\n'.join(lst))
     f.close()
     
 write_model_to_file(java_pairs,out_java_model)
