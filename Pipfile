@@ -9,6 +9,8 @@ matplotlib = "*"
 sklearn = "*"
 "pyPEG2" = "*"
 astor = "*"
+gensim = "*"
+Flask = "*"
 
 [dev-packages]
 
