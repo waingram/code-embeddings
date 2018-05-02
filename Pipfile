@@ -7,10 +7,10 @@ name = "pypi"
 regex = "*"
 matplotlib = "*"
 sklearn = "*"
-"pyPEG2" = "*"
 astor = "*"
 gensim = "*"
 Flask = "*"
+javalang = "*"
 
 [dev-packages]
 
