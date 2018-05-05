@@ -28,7 +28,7 @@ tokenized_code = code_repository.tokenize_loaded_data()
 
 print('Data Loaded')
 print('Start training')
-wrd_embd = Word_Embedder(tokenized_code,'w2v', size=100, window=10, min_count=1, iter = 5, workers=4)
+wrd_embd = Word_Embedder(tokenized_code,'w2v', size=100, window=10, min_count=1, iter = 5, workers=4,sg=1)
 wrd_embd.save_model('word2v.mdl')
 
 
@@ -96,10 +96,11 @@ mdl2.wv.most_similar('NullPointerException')
 
 
 
-index_file = "E://PHD//Thesis VT//SourceCodeEmbedding//code-embeddings//models//autoEncode models//vocab.txt"
-w_embed_file = "E://PHD//Thesis VT//SourceCodeEmbedding//code-embeddings//models//autoEncode models//embed.txt"
+#index_file = "E://PHD//Thesis VT//SourceCodeEmbedding//code-embeddings//models//deep learning models//rosetta dataset model//vocab.txt"
+index_file = "E://PHD//Thesis VT//SourceCodeEmbedding//code-embeddings//models//deep learning models//tufano dataset model//vocab.txt"
 
-
+#w_embed_file = "E://PHD//Thesis VT//SourceCodeEmbedding//code-embeddings//models//deep learning models//rosetta dataset model//embed.txt"
+w_embed_file = "E://PHD//Thesis VT//SourceCodeEmbedding//code-embeddings//models//deep learning models//tufano dataset model//embed.txt"
 
 f = open(w_embed_file,'r')
 embed = f.readlines()
