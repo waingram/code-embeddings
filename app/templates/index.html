@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="'UTF-8">
+    <title>Java Source Code Search</title>
+</head>
+<body>
+<div style="width:1024px;margin:10px auto">
+    <h1>Search for Code</h1>
+    <form action="" method="POST">
+        <textarea name="search-text" cols="40" rows="5">{{search_text}}</textarea>
+        <input type="submit" value="Go">
+    </form>
+    <table>
+    {% for row in table_data %}
+        <tr>
+          <td>{{ row[0] }}</td>
+          <td>{{ row[1] }}</td>
+        </tr>
+    {% endfor %}
+    </table>
+</div>
+</body>
+</html>
