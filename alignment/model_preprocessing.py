@@ -14,8 +14,8 @@ import tokenize
 
 java_model_file = "..//models//github-java-vectors.bin"
 python_model_file = "..//models//github-python-vectors.bin"
-out_java_model = "..//models//j_fun_vectors.mdl"
-out_python_model = "..//models//p_fun_vectors.mdl"
+out_java_model = "..//models//j_fun_vectors.bin"
+out_python_model = "..//models//p_fun_vectors.bin"
 
 java_model =  Doc2Vec.load(java_model_file)
 python_model =  Doc2Vec.load(python_model_file)
@@ -82,7 +82,21 @@ def write_model_to_file(model_pair,fname):
         sublst.append(x.strip())
         sublst += [ str(s).strip() for s in v]
         lst.append(' '.join(sublst))
-    f.write('\n'.join(lst))
+        if len(lst) > 100000:
+            try:
+                f.write('\n'.join(lst))
+                f.write('\n')
+                lst = []
+                print('wrote current chunk')
+            except:
+                print('omitted current chunk')
+                lst = []
+                continue
+    try:
+        f.write('\n'.join(lst))
+    except:
+        print('final chunk')
+    print('File written sucessfully')
     f.close()
     
 jdocs = [(doc.tags, java_model.infer_vector(doc.words, steps=50)) 
@@ -90,8 +104,8 @@ jdocs = [(doc.tags, java_model.infer_vector(doc.words, steps=50))
 pdocs = [(doc.tags, python_model.infer_vector(doc.words, steps=50)) 
                                         for doc in python_test_corpus]
 
-java_pairs = [(x,java_model.docvecs[x]) for x in java_model.docvecs.doctags.keys()]
-python_pairs = [(x,python_model.docvecs[x]) for x in python_model.docvecs.doctags.keys()]
+java_pairs = [(x.replace(' ',''),java_model.docvecs[x]) for x in java_model.docvecs.doctags.keys()]
+python_pairs = [(x.replace(' ',''),python_model.docvecs[x]) for x in python_model.docvecs.doctags.keys()]
 
 full_jpairs = java_pairs + jdocs
 full_pypairs = python_pairs + pdocs
@@ -142,5 +156,3 @@ for s in randomset:
     
 with open(alignment_file,'w') as f:
     f.write("\n".join(pairs))
-
-
