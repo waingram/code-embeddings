@@ -6,12 +6,13 @@ The ability to search code repositories for functionally equivalent code would b
 
 ## Requirements
 
- - regex
- - matplotlib
- - sklearn
  - astor
- - gensim
  - Flask
+ - gensim
+ - javalang
+ - matplotlib
+ - regex
+ - sklearn
 
 Install packages with ```pipenv```:
 
