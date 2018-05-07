@@ -11,6 +11,7 @@ astor = "*"
 gensim = "*"
 Flask = "*"
 javalang = "*"
+flask = "*"
 
 [dev-packages]
 
