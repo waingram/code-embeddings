@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,16 +8,24 @@
 <div style="width:1024px;margin:10px auto">
     <h1>Search for Code</h1>
     <form action="" method="POST">
+        <select name="lang">
+            <option value="java" selected>Java</option>
+            <option value="python">Python</option>
+        </select>
+        <br />
+        <br />
         <textarea name="search-text" cols="40" rows="5">{{search_text}}</textarea>
         <input type="submit" value="Go">
     </form>
     <table>
-    {% for row in table_data %}
+        {% for row in table_data %}
         <tr>
-          <td>{{ row[0] }}</td>
-          <td>{{ row[1] }}</td>
+            <td><a href="{{ row[2] }}">{{ row[2] }}</a></td>
         </tr>
-    {% endfor %}
+        <tr>
+            <td>Similarity: {{ row[1] }}</td>
+        </tr>
+        {% endfor %}
     </table>
 </div>
 </body>
