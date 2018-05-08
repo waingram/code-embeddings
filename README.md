@@ -24,3 +24,7 @@ Install packages with ```pipenv```:
  - [Doc2Vec Python embedding](https://github.com/waingram/code-embeddings/blob/master/experiments/doc2vec_python_experiments.ipynb)
  - [Java Parsing](https://github.com/waingram/code-embeddings/blob/master/experiments/java_parsing.ipynb)
  - [Python Parsing](https://github.com/waingram/code-embeddings/blob/master/experiments/python_parsing.ipynb)
+
+ ## Sample Search Engine
+
+ - [Proof of concept code search engine](https://github.com/waingram/code-embeddings/tree/master/app)
